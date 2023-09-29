@@ -41,12 +41,24 @@ def calculator_excercise(op, num1, num2):
      return num1 * num2
  elif(op == '/'):
      return num1 / num2
+ elif(op == 'f'):
+     result = (num1*9/5) + 32
+     return result
  else:
-     return 0
+     return "Input error"
 
 
-a = int(input("Please enter First Number: "))
-b = int(input("Please enter Another Number: "))
-c = input("Enter operation (+  , - , * , /): ")
-print("Your result is:" , calculator_excercise(c, a, b))
+# a = float(input("Please enter First Number: "))
+# b = float(input("Please enter Another Number: "))
+# c = input("Enter operation (+  , - , * , /): ")
+# print("Your result is:" , calculator_excercise(c, a, b))
      
+def num_days(month):
+    days = 31
+    if month == 'feb':
+       days = 28
+    elif month == 'apr' or month == 'jun' or month == 'sep'or month == 'nov':
+        days = 30
+    print(f"The number of days in {month} is {days}")
+
+num_days('nov')
