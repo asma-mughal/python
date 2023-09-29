@@ -62,3 +62,29 @@ def num_days(month):
     print(f"The number of days in {month} is {days}")
 
 num_days('nov')
+print((2**2) == 4)
+number = 10
+if number > 11:
+    print (0)
+elif number!=10:
+    print(1)
+elif number >=20 or number <12:
+    print(2)
+else:
+    print(3)
+print(9999+8888)
+print(100 *100)
+def calculate_storage(filesize):
+    block_size = 4096
+    full_blocks = filesize // block_size
+    partial_block_remainder = filesize % block_size
+    if partial_block_remainder > 0:
+        return (full_blocks + 1) * block_size
+    else:
+        return block_size * full_blocks
+print(calculate_storage(1)) #should be equal to 4096
+print(calculate_storage(4096))#should be equal to 4096
+
+print(calculate_storage(4097))#should be equal to 8192
+
+print(calculate_storage(6000))#should be equal to 8192
