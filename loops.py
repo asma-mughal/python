@@ -130,7 +130,7 @@
 #     if n ==0:
 #         return 0
 #     else:
-#         return n+ sum_positive(n-1)
+#         return n+ sum_positive(n-1)c;lkb c cvd     vhjiop;"{}?. #         return n+ sum_positive(n-1)c;lkb c cvd    
 # print(sum_positive(5))
 
 def is_power_of(number, base):
