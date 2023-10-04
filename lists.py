@@ -48,19 +48,30 @@
 # # print("Worst Day: " ,min(sales))
 # # print("Best Day: ", max(sales))
 # print("Total: " ,sum(sales))
-filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
-new_filenames=[]
-count = 0
-for file in filenames:
-    if ".hpp" in file:
-        new_string = file.replace('.hpp', '.h')
-        new_filenames.append(new_string)
+# filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+# new_filenames=[]
+# count = 0
+# for file in filenames:
+#     if ".hpp" in file:
+#         new_string = file.replace('.hpp', '.h')
+#         new_filenames.append(new_string)
         
-    else:
-        new_filenames.append(file)
+#     else:
+#         new_filenames.append(file)
     
-print(new_filenames)
-    
-
-
-    
+# print(new_filenames)
+# animals = ["lion", "zebra", "dolphin"]
+# for index, animal in enumerate(animals):
+#     for index2, chars in enumerate(animal):
+#         print(index2, chars)
+def pig_latin(text):
+  say = "ay"
+  words = text.split() 
+  new_word_list = []
+  for word in words:
+    new_word = word[1:] + word[0] +say
+    new_word_list.append(new_word)
+  result = " ".join(new_word_list)
+  return result
+		
+print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
