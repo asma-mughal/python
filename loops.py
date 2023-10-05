@@ -149,11 +149,41 @@
 # for i in range(n):
 #     print(i*i)
 
-def is_leap(year):
-    leap = False
-    if( year % 4 ==0 and year % 100 != 0) or (year % 400 ==0):
-        leap = True
-    return leap
+# def is_leap(year):
+#     leap = False
+#     if( year % 4 ==0 and year % 100 != 0) or (year % 400 ==0):
+#         leap = True
+#     return leap
 
-year = int(input())
-print(is_leap(year))
+# year = int(input())
+# print(is_leap(year))
+
+# N = int(input("Enter number of commands: "))
+# new_list = []
+# for i in range(N):
+#     command = input().split()  # Read the command as a list of words
+#     if command[0] == "insert":
+#         position = int(command[1])
+#         element = int(command[2])
+#         new_list.insert(position, element)
+#     if command[0]=="print":
+#         print(new_list)
+#     if command[0] == "remove":
+#         position = int(command[1])
+#         new_list.remove(position)
+#     if command[0] == "append":
+#         element =int( command[1])
+#         new_list.append(element)
+#     if command[0] == "sort":
+#         new_list.sort()
+#     if command[0]== "pop":
+#         new_list.pop()
+#     if command[0] == "reverse":
+#         new_list.reverse()
+
+n = int(input())
+arr = map(int, input().split())
+new_set = set(arr)
+sorted_arr = sorted(new_set)
+print(sorted_arr[-2])
+
