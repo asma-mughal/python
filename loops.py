@@ -133,14 +133,27 @@
 #         return n+ sum_positive(n-1)c;lkb c cvd     vhjiop;"{}?. #         return n+ sum_positive(n-1)c;lkb c cvd    
 # print(sum_positive(5))
 
-def is_power_of(number, base):
-    if(base <=1 and number <=0):
-        return False
-    elif number %base == 0:
-        return is_power_of()
-    else:
-        return True
+# def is_power_of(number, base):
+#     if(base <=1 and number <=0):
+#         return False
+#     elif number %base == 0:
+#         return is_power_of()
+#     else:
+#         return True
     
 
-print(is_power_of(8,2))
+# print(is_power_of(8,2))
         
+
+# n = int(input("Enter a number"))
+# for i in range(n):
+#     print(i*i)
+
+def is_leap(year):
+    leap = False
+    if( year % 4 ==0 and year % 100 != 0) or (year % 400 ==0):
+        leap = True
+    return leap
+
+year = int(input())
+print(is_leap(year))
