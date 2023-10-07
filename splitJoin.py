@@ -27,8 +27,10 @@
 #             if(x + y + z != n):
 #                 coordinates.append((coordinate))  # Append the tuple to the list
 # print(coordinates)
-new_list = []
-for _ in range(int(input())):
-        name = input()
-        score = float(input())
-        new_list.append(name, score)
+# new_list = []
+# for _ in range(int(input())):
+#         name = input()
+#         score = float(input())
+#         new_list.append(name, score)
+inputString = str(input(""))
+print("-".join(inputString))

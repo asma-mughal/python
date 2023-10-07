@@ -64,14 +64,31 @@
 # for index, animal in enumerate(animals):
 #     for index2, chars in enumerate(animal):
 #         print(index2, chars)
-def pig_latin(text):
-  say = "ay"
-  words = text.split() 
-  new_word_list = []
-  for word in words:
-    new_word = word[1:] + word[0] +say
-    new_word_list.append(new_word)
-  result = " ".join(new_word_list)
-  return result
+# def pig_latin(text):
+#   say = "ay"
+#   words = text.split() 
+#   new_word_list = []
+#   for word in words:
+#     new_word = word[1:] + word[0] +say
+#     new_word_list.append(new_word)
+#   result = " ".join(new_word_list)
+#   return result
 		
-print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
+# print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"
+my_2D_list= []
+another_list = []
+unique_grade = set()
+name_list = []
+N = int(input("Enter a number: "))
+for item in range(N):
+        name = input()
+        score = float(input())
+        student_data = [name, score]   
+        my_2D_list.append(student_data)
+for row in my_2D_list:
+    for element in row:
+         if not isinstance(element, str):
+            another_list.append(element)
+         else:
+              name_list.append(element)
+              
