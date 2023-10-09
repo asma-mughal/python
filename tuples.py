@@ -27,9 +27,22 @@
 # print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # Should be "Marketing: Mike, Karen, Jake, Tasha"
 # print(group_list("Engineering", ["Kim", "Jay", "Tom"])) # Should be "Engineering: Kim, Jay, Tom"
 # print(group_list("Users", "")) # Should be "Users:"
-def guest_list(guests):
-	for guest in guests:
-		name, age , occupation = guest
-		print(f"{name} is {age} years old and works as a {occupation}")
+# def guest_list(guests):
+# 	for guest in guests:
+# 		name, age , occupation = guest
+# 		print(f"{name} is {age} years old and works as a {occupation}")
 
-guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+# guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
+
+# eng_students = int(input())
+# eng_roll_numbers = set(map(int, input().split()))
+# fren_students = int(input())
+# fren_roll_numbers = set(map(int, input().split()))
+# union_of_roll_numbers = eng_roll_numbers.intersection(fren_roll_numbers)
+# print(len(union_of_roll_numbers))
+N = int(input())
+space_integers = list(map(int, input().split()))
+print(space_integers)
+if(all(space_integers) and any(space_integers)):
+    print("True")
