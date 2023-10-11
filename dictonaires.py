@@ -102,14 +102,37 @@
 # new_items= {'jeans':['white'], 'scarf': ['yellow'],'socks':['black', 'brown']}
 # wardrobe.update(new_items)
 # print(wardrobe)
-def add_prices(basket):
-	total = 0
-	for key, values in basket.items():
-		total += values
-	# Limit the return value to 2 decimal places
-	return round(total, 2)  
+# def add_prices(basket):
+# 	total = 0
+# 	for key, values in basket.items():
+# 		total += values
+# 	# Limit the return value to 2 decimal places
+# 	return round(total, 2)  
 
-groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59, 
-	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}
+# groceries = {"bananas": 1.56, "apples": 2.50, "oranges": 0.99, "bread": 4.59, 
+# 	"coffee": 6.99, "milk": 3.39, "eggs": 2.98, "cheese": 5.44}
 
-print(add_prices(groceries)) # Should print 28.44
+# print(add_prices(groceries)) # Should print 28.44
+
+#Replace all ______ with rjust, ljust or center. 
+
+thickness = int(input()) #This must be an odd number
+c = 'H'
+
+for i in range(thickness):
+    print((c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1))
+
+for i in range(thickness+1):
+    print((c*thickness).ljust(thickness*2)+(c*thickness).rjust(thickness*6))
+
+#Middle Belt
+for i in range((thickness+1)//2):
+    print((c*thickness*5).center(thickness*6))    
+
+#Bottom Pillars
+for i in range(thickness+1):
+    print((c*thickness).rjust(thickness*2)+(c*thickness).ljust(thickness*6))    
+
+#Bottom Cone
+for i in range(thickness):
+    print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).center(thickness*6))
