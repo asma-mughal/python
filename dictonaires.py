@@ -116,23 +116,39 @@
 
 #Replace all ______ with rjust, ljust or center. 
 
-thickness = int(input()) #This must be an odd number
-c = 'H'
+# thickness = int(input()) #This must be an odd number
+# c = 'H'
 
-for i in range(thickness):
-    print((c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1))
+# for i in range(thickness):
+#     print((c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1))
 
-for i in range(thickness+1):
-    print((c*thickness).ljust(thickness*2)+(c*thickness).rjust(thickness*6))
+# for i in range(thickness+1):
+#     print((c*thickness).center(thickness*2)+(c*thickness).rjust(thickness*6))
 
-#Middle Belt
-for i in range((thickness+1)//2):
-    print((c*thickness*5).center(thickness*6))    
+# #Middle Belt
+# for i in range((thickness+1)//2):
+#     print((c*thickness*5).center(thickness*6))    
 
-#Bottom Pillars
-for i in range(thickness+1):
-    print((c*thickness).rjust(thickness*2)+(c*thickness).ljust(thickness*6))    
+# #Bottom Pillars
+# for i in range(thickness+1):
+#     print((c*thickness).rjust(thickness*2)+(c*thickness).ljust(thickness*6))    
 
-#Bottom Cone
-for i in range(thickness):
-    print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).center(thickness*6))
+# #Bottom Cone
+# for i in range(thickness):
+#     print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).center(thickness*6))
+
+def wrap(string, max_width):
+   result = ""
+   len_result = 0
+   for item in string:
+      if len_result != max_width:
+         result = result + item
+         len_result = len_result + 1
+      else:
+         len_result = 0
+         result = result + "\n"
+   return(result)      
+
+string, max_width = input(), int(input())
+result = wrap(string, max_width)
+print(result)
