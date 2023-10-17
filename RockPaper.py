@@ -7,7 +7,6 @@ while True:
     if user_input == 'q':
         break
     random_number = random.randint(0,2)
-    print(random_number)
     #rock = 0, paper = 1, scissors = 2
     computer_pick = options[random_number]
     print(f"Computer Picks: {computer_pick}")
