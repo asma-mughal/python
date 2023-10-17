@@ -31,3 +31,37 @@ walking_cost = price_calc(4,6)
 print(walking_cost(10)) 
 print((price_calc(3,4)(1)))
 print((lambda a,b,c: a+b+c)(2,3,4))
+
+sum_lambda = lambda x : x + 5
+print(sum_lambda(2))
+
+strip_spaces = lambda str: ''.join(str.split(' '))
+print(strip_spaces('Monty Pythons Flying Circus')) 
+
+join_list_no_duplicates = lambda list_a, list_b : list(set(list_a + list_b))
+list_a = [1,2,3,4]
+list_b = [3,4,5,6,7]
+print(join_list_no_duplicates(list_a,list_b))
+
+def quad_function(a,b,c):
+    return lambda x : a * (x *x) + (b * x) + c
+g = (quad_function(2, 5, 6))
+print(g(2))
+
+
+
+signups = ['MPF104', 'MPF20', 'MPF2', 'MPF17', 'MPF3', 'MPF45']
+print(sorted(signups, key = lambda id :int(id[3:])))
+
+class Player:
+   def __init__(self, name, score):
+       self.name = name
+       self.score =  score
+
+Eric = Player('Eric', 116700)
+John = Player('John', 24327)
+Terry = Player('Terry', 150000)
+player_list = [Eric, John, Terry]
+
+print(sorted(player_list, key = lambda player: player.score))
+print([player.name for player in player_list])
